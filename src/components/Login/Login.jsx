@@ -21,7 +21,6 @@ const Login = ({ setToken }) => {
       const result = await response.json();
       result.success ? setMessage(result.data.message) : setMessage(result.error.message);
       result.success && setToken(result.data.token);
-      console.log(result);
     } catch(err) {
       console.log(err)
     }

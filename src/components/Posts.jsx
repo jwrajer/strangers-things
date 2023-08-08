@@ -13,7 +13,6 @@ const Posts = () => {
         const response = await fetch(`${BASE_URL}/posts`);
         const data = await response.json();
         setCurrentPosts(data.data.posts);
-        console.log(data.data.posts);
       } catch (err) {
         console.log(err)
       }

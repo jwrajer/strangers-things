@@ -12,7 +12,7 @@ function App() {
   const [token, setToken] = useState();
 
   useEffect(() => {
-    console.log(`fire token`)
+    
   },[token])
 
   return (

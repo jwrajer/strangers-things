@@ -18,8 +18,6 @@ const DashboardDisplay = ({ token }) => {
         });
         const result = await response.json();
         setMyData(result.data);
-        console.log(result.data)
-        return result
       } catch (err) {
         console.error(err);
       }
@@ -34,7 +32,9 @@ const DashboardDisplay = ({ token }) => {
       {myData && <p>{myData.username}</p>}
       <section>
         <h2>Messages</h2>
-        {myData && <p>{myData.messages}</p>}
+        {myData && <p>{myData.messages.map(message => {
+          return <h1>test</h1>
+        })}</p>}
       </section>
       <section>
         <h2>My Posts</h2>
@@ -48,7 +48,6 @@ const DashboardDisplay = ({ token }) => {
           )
         })}</p>}
       </section>
-      <button onClick={() => console.log(myData)}>here</button>
     </section>
   )
 }
