@@ -1,17 +1,16 @@
-import SignUp from './SignUp/SignUp'
-import { Link, Route, Routes } from 'react-router-dom'
+import Login from './Login/Login';
+import { Link, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
 
-const Dashboard = () => {
+const Dashboard = ({ token }) => {
 
   const COHORT_NAME = '2306-FSA-ET-WEB-FT-SF';
   const BASE_URL = `https://strangers-things.herokuapp.com/api/${COHORT_NAME}`;
 
 
-
   return (
-    <>
-      <h1>Dashboard</h1>
-      <p>Don't have an account already?<Link to='/sign-up'>Sign Up</Link></p>
+    <>  
+      {token ? <h1>Dashboard</h1> : <Login />}
     </>
   )
 }

@@ -7,15 +7,16 @@ import SignUp from './components/SignUp/SignUp'
 import './App.css'
 
 function App() {
-
+  
+  const [token, setToken] = useState(true);
 
   return (
     <>
-      <Navbar />
+      <Navbar token={token}/>
 
       <Routes>
         <Route path='/' element={<Posts />} />
-        <Route path='/dash' element={<Dashboard />} />
+        <Route path='/dash' element={<Dashboard token={token}/>} />
         <Route path='/sign-up' element={<SignUp />} />
       </Routes>
     </>
