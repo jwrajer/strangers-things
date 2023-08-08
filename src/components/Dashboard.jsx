@@ -1,4 +1,5 @@
-import SignUp from './form-components/SignUp'
+import SignUp from './SignUp/SignUp'
+import { Link, Route, Routes } from 'react-router-dom'
 
 const Dashboard = () => {
 
@@ -10,7 +11,7 @@ const Dashboard = () => {
   return (
     <>
       <h1>Dashboard</h1>
-      <SignUp />
+      <p>Don't have an account already?<Link to='/sign-up'>Sign Up</Link></p>
     </>
   )
 }
