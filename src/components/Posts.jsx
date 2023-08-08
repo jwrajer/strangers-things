@@ -25,12 +25,12 @@ const Posts = () => {
     <>
     {currentPosts.map(post => {
       return (
-        <section className='post' id={post.id}>
-          <section className='postHead'>
+        <section className='post' id={post.id} key={post.id}>
+          <section className='postHead' key={post.id}>
             <h3>{post.title}</h3>
             <p>{post.price}</p>
           </section>
-          <section>
+          <section className='postInfo' key={post.id}>
             <h4>Location:</h4><p>{post.location}</p>
           </section>
         </section>
