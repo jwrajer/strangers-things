@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Posts from './components/Posts'
 import Dashboard from './components/Dashboard/Dashboard'
 import SignUp from './components/SignUp/SignUp'
+import CreateListing from './components/CreateListing/CreateListing'
 import './App.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Posts />} />
+        <Route path='/create' element={<CreateListing />} />
         <Route path='/user/:token' element={<Dashboard token={token} setToken={setToken}/>} />
         <Route path='/sign-up' element={<SignUp />} />
       </Routes>
