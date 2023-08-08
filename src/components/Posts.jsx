@@ -29,6 +29,7 @@ const Posts = () => {
           <section className='postHead' key={post.id}>
             <h3>{post.title}</h3>
             <p>{post.price}</p>
+            <p>{post.description}</p>
           </section>
           <section className='postInfo' key={post.id}>
             <h4>Location:</h4><p>{post.location}</p>
