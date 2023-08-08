@@ -1,6 +1,6 @@
 # Stranger's Things
 
- I didn't get to add edit/delete button for posts, but that was mostly likely next. If messages existed it would break the dashboard unless I do a quick .map to it.
+ I didn't get to add edit button for posts, but that was mostly likely next. If messages existed it would break the dashboard unless I do a quick .map to it.
 
 I do recognize that I switched halfway from refering to posts as listings
 
