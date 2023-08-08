@@ -66,7 +66,6 @@ const CreateListingForm = ({ makeListing }) => {
             type='radio'
             value={true}
             name='willDeliver'
-            // checked={willDeliver === true}
             onChange={(event) => setWillDeliver(event.target.value)}
           />
          Yes
@@ -77,7 +76,6 @@ const CreateListingForm = ({ makeListing }) => {
             type='radio'
             value={false}
             name='willDeliver'
-            // checked={willDeliver === false}
             onChange={(event) => setWillDeliver(event.target.value)}
           />
          No
