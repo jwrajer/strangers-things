@@ -10,6 +10,11 @@
   border: 1px black solid
 }
 
+.dashboard-posts{
+  margin: 1em;
+  border: 1px black solid
+}
+
 #navbar {
   display: flex;
   justify-content: space-between;

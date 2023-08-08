@@ -38,8 +38,17 @@ const DashboardDisplay = ({ token }) => {
       </section>
       <section>
         <h2>My Posts</h2>
-        {myData && <p>{myData.posts}</p>}
+        {myData && <p>{myData.posts.map(post => {
+          return (
+            <section className='dashboard-posts'>
+              <h3>{post.title}</h3>
+              <p>{post.createdAt}</p>
+              <p>{post.description}</p>
+            </section>
+          )
+        })}</p>}
       </section>
+      <button onClick={() => console.log(myData)}>here</button>
     </section>
   )
 }

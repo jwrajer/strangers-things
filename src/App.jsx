@@ -21,7 +21,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Posts />} />
-        <Route path='/create' element={<CreateListing />} />
+        <Route path='/create' element={<CreateListing token={token}/>} />
         <Route path='/user/:token' element={<Dashboard token={token} setToken={setToken}/>} />
         <Route path='/sign-up' element={<SignUp />} />
       </Routes>
