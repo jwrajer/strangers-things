@@ -7,8 +7,8 @@ import SignUp from './components/SignUp/SignUp'
 import './App.css'
 
 function App() {
-  
-  const [token, setToken] = useState(true);
+
+  const [token, setToken] = useState(false);
 
   return (
     <>
@@ -16,7 +16,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Posts />} />
-        <Route path='/dash' element={<Dashboard token={token}/>} />
+        <Route path='/user/:token' element={<Dashboard token={token}/>} />
         <Route path='/sign-up' element={<SignUp />} />
       </Routes>
     </>
