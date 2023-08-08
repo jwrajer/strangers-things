@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const LoginForm = () => {
+const LoginForm = ({ login}) => {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -13,7 +13,7 @@ const LoginForm = () => {
         password,
       }
     }
-    console.log(body);
+    login(body);
   }
 
   return (

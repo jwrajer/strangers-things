@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Posts from './components/Posts'
@@ -8,15 +8,19 @@ import './App.css'
 
 function App() {
 
-  const [token, setToken] = useState(false);
+  const [token, setToken] = useState();
+
+  useEffect(() => {
+    console.log(`fire token`)
+  },[token])
 
   return (
     <>
-      <Navbar token={token}/>
+      <Navbar token={token} setToken={setToken}/>
 
       <Routes>
         <Route path='/' element={<Posts />} />
-        <Route path='/user/:token' element={<Dashboard token={token}/>} />
+        <Route path='/user/:token' element={<Dashboard token={token} setToken={setToken}/>} />
         <Route path='/sign-up' element={<SignUp />} />
       </Routes>
     </>
