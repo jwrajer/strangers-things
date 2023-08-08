@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Posts from './components/Posts'
 import './App.css'
 
 function App() {
@@ -6,7 +9,11 @@ function App() {
 
   return (
     <>
-      <h1>App</h1>
+      <Navbar />
+
+      <Routes>
+        <Route path='/' element={<Posts />} />
+      </Routes>
     </>
   )
 }
